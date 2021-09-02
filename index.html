@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Country</title>
+
+    <!-- TAILWINDCSS CDN -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- CUSTOM CSS -->
+    <style>
+
+    </style>
+
+</head>
+<body class="w-11/12 md:w-5/6 lg:w-3/4 text-center mx-auto">
+    <main>
+        <section class="my-10 text-3xl font-bold text-gray-700">
+            <h1>Book Archive</h1>
+        </section>
+        <section class="mt-10">
+            <div>
+                <input id="search-input" class="px-5 py-3 bg-gray-100 rounded outline-none w-1/2" type="text" placeholder="Type a book name">
+                <button onclick="searchBooks()" id="search-btn" class="px-5 py-3 bg-gray-800 hover:bg-gray-700 rounded text-white">Search</button>
+            </div>
+            <!-- Toggle spinner -->
+            <div>
+                <h4 id="spinner" class="text-xl mt-3 hidden">Loading...</h4>
+            </div>
+            <div class="my-10">
+                <h2 id="results-found"></h2>
+            </div>
+            <div id="error-msg" class="text-xl">
+
+            </div>
+        </section>
+        <section>
+
+            <!-- BOOK SEARCH RESULTS -->
+
+            <div id="book-search-results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+            </div>
+        </section>
+    </main>
+    <script src="/app.js"></script>
+</body>
+</html>
